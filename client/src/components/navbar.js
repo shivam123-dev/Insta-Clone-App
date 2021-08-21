@@ -2,7 +2,7 @@ import React,{useContext,useRef,useEffect,useState} from 'react'
 import {Link ,useHistory} from 'react-router-dom'
 import {UserContext} from '../App'
 import M from 'materialize-css'
-const NavBar = ()=>{
+const Navbar = ()=>{
     const  searchModal = useRef(null)
     const [search,setSearch] = useState('')
     const [userDetails,setUserDetails] = useState([])
@@ -93,4 +93,4 @@ const NavBar = ()=>{
 }
 
 
-export default NavBar
+export default Navbar
