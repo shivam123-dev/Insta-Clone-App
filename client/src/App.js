@@ -3,7 +3,7 @@ import Navbar from './components/navbar'
 import "./App.css"
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
 import Home from './components/screens/Home'
-import Signin from './components/screens/SignIn'
+import SignIn from './components/screens/SignIn'
 import Profile from './components/screens/Profile'
 import Signup from './components/screens/Signup'
 import CreatePost from './components/screens/CreatePost'
@@ -24,7 +24,7 @@ const Routing = () => {
       dispatch({ type: "USER", payload: user })
     } else {
       if (!history.location.pathname.startsWith('/reset'))
-        history.push('/signin')
+        history.push('/SignIn')
     }
   }, [])
   return (
@@ -32,8 +32,8 @@ const Routing = () => {
       <Route exact path="/" >
         <Home />
       </Route>
-      <Route path="/signin">
-        <Signin />
+      <Route path="/SignIn">
+        <SignIn />
       </Route>
       <Route path="/signup">
         <Signup />
